@@ -9,7 +9,7 @@
 ### Giới thiệu về Vagrant
 - Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên ubuntu, macOS và Windows
 - Máy ảo có thể chạy trên Vmware, HyperV(?), AWS...
-- Bài viết & hướng dẫn cài đặt [Vagant] = https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA
+- Bài viết & hướng dẫn cài đặt [Vagant]="https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA"
 
 
 Hi
