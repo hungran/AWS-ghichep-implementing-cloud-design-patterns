@@ -1,6 +1,6 @@
 # GHI CHÉP QUÁ TRÌNH ĐỌC VÀ THỰC HÀNH CUỐN Implement_Cloud_Design_Patterns
-# MỤC LỤC
-## Basic Patterns / Mô hình cơ bản
+## MỤC LỤC
+### Basic Patterns / Mô hình cơ bản
 
 * Môi trường yêu cầu *
 - Tài khoản AWS (khuyên dùng tài khoản free)
@@ -13,3 +13,4 @@
 
 
 Hi
+git p
