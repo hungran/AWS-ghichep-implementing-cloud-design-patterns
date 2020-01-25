@@ -16,7 +16,7 @@ vmhung290791@gmail.com
 - Máy ảo có thể chạy trên các môi trường từ onpremis ví dụ như `Vmware`, `HyperV(?)`, hoặc cloud `AWS` ...
 - Bài viết & hướng dẫn cài đặt trên Windows (tiếng Việt) [Vagrant-viblo.asia](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
 - Hướng dẫn cài đặt plug in aws cho vagrant [Link chính thức](https://github.com/mitchellh/vagrant-aws)
-- *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit *
+- *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit*
  `The "libxml2" package isn't available #539`
 	- Hướng dẫn:
 		- 1. Install fog-ovirt 1.0.1
