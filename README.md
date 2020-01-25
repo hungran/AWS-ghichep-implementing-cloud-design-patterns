@@ -3,7 +3,8 @@ vmhung290791@gmail.com
 - [Nguồn]()
 # GHI CHÉP QUÁ TRÌNH ĐỌC VÀ THỰC HÀNH CUỐN Implement_Cloud_Design_Patterns
 ## MỤC LỤC
-### Basic Patterns / Mô hình cơ bản
+- [Giới thiệu về Vagrant](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-vagrant)
+- [Snapshoot patterns]()
 
 *Môi trường yêu cầu*:
 
@@ -12,10 +13,10 @@ vmhung290791@gmail.com
 
 ### Giới thiệu về Vagrant
 - Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên ubuntu, macOS và Windows
-- Máy ảo có thể chạy trên Vmware, HyperV(?), AWS...
-- Bài viết & hướng dẫn cài đặt trên windows [Vagrant](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
-- Hướng dẫn cài đặt plug in aws cho vagrant [Link](https://github.com/mitchellh/vagrant-aws)
-- *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit*
+- Máy ảo có thể chạy trên các môi trường từ onpremis ví dụ như `Vmware`, `HyperV(?)`, hoặc cloud `AWS` ...
+- Bài viết & hướng dẫn cài đặt trên Windows (tiếng Việt) [Vagrant-viblo.asia](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
+- Hướng dẫn cài đặt plug in aws cho vagrant [Link chính thức](https://github.com/mitchellh/vagrant-aws)
+- *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit *
  `The "libxml2" package isn't available #539`
 	- Hướng dẫn:
 		- 1. Install fog-ovirt 1.0.1
@@ -30,4 +31,6 @@ vmhung290791@gmail.com
 		2. `vagrant reload --provision` khởi động lại VM
 		3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
 		4. `vagrant destroy` terminate vm
+### Snapshoot patterns
+
 	
