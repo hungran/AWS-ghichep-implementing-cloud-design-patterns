@@ -8,7 +8,7 @@ vmhung290791@gmail.com
 *Môi trường yêu cầu*:
 
 	- Tài khoản AWS (khuyên dùng tài khoản free)
-	- Amazon Machine Image (AMI) titled Amazon Linux AMI
+	- Ubuntu 16.04 LTS freetier, t2.micro
 
 ### Giới thiệu về Vagrant
 - Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên ubuntu, macOS và Windows
@@ -24,4 +24,10 @@ vmhung290791@gmail.com
 	`vagrant plugin install vagrant-aws`
 - Reason: fog-ovirt is one of the dependencies and since version 1.0.2 it depends on ovirt-engine-sdk which is giving trouble'
 
-- Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile)s sample ở đây :) 
+- Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile)s sample ở đây :)
+- Một số lệnh cơ bản của vagrant:
+	1. `vagrant up --provider=aws` chạy vagrant với aws từ `vagrantfile`
+	2. `vagrant reload --provision` khởi động lại VM
+	3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
+	4. `vagrant destroy` terminate vm
+	
