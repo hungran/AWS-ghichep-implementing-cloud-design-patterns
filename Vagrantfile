@@ -1,6 +1,5 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "dummy"
-  config.vm.provision :shell, path: "C:/HashiCorp/bootstrap.sh"
   config.vm.provider :aws do |aws, override|
     aws.access_key_id = "XXXXXXXXX"
     aws.secret_access_key = "XXXXXXX"
@@ -18,7 +17,9 @@ Vagrant.configure("2") do |config|
 		'Name' => 'Hung_Test_Vagrantfile_Bootstrap_02'
 	}
 	aws.keypair_name = "hung20190616"
+	aws.user_data = File.read("bootstrap.txt")
     override.ssh.username = "ubuntu"
     override.ssh.private_key_path = "C:/HashiCorp/hung20190616.pem"
+	
   end
 end
