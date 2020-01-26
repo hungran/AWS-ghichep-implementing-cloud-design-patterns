@@ -12,7 +12,7 @@ vmhung290791@gmail.com
 	- Ubuntu 16.04 LTS freetier, t2.micro
 
 ### Giới thiệu về Vagrant
-- Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên ubuntu, macOS và Windows
+- Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên Ubuntu, macOS và Windows
 - Ngôn ngữ được sử dụng là `ruby`
 - Máy ảo có thể chạy trên các môi trường từ on-prem ví dụ như `Vmware`, `HyperV(?)`, hoặc cloud `AWS` ...
 - Bài viết & hướng dẫn cài đặt trên Windows (tiếng Việt) [Vagrant-viblo.asia](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
@@ -52,12 +52,30 @@ vmhung290791@gmail.com
 		
 
 
-- CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả như hình
+- CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả public-ipv4 là **18.140.60.200** như hình
 		<img src ="https://imgur.com/TO2tulA.jpg">
-- Tuy nhiên khi mở trên trình duyệt web lại ra kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
+- Tuy nhiên khi truy cập web lại ra kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
 		<img src ="https://imgur.com/Gm0ZqDO.jpg">
+
+## OK!!! Khó quá bỏ qua :)
 
 - Tạo snapshoot `ebs` đẩy vào s3 từ running instance
 	- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
-	- 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
+	- 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **Description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
+	
+	<img src ="https://imgur.com/dPORWBp.jpg">
+	
 	- 3. Tại giao diện Volumes section, chuột phải chọn Volume cần snapshoot chọn **Create Snapshot**
+		
+		<img src ="https://imgur.com/iLGIEo3.jpg">
+	
+	- 4. Giao diện **Create Snapshot** popup ra, ta điền các tham số như hình:	
+		
+		<img src ="https://imgur.com/M2yB2C4.jpg">
+	
+	- 5. Kết quả:
+	
+		<img src ="https://imgur.com/undefined.jpg">
+		
+### NEW!!! Dùng snapshot lifecycle tự động tạo và xóa snapshoot
+		
