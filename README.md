@@ -87,11 +87,11 @@ vmhung290791@gmail.com
 
 - CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả public-ipv4 là **18.140.60.200** như hình
 		
-		<img src ="https://imgur.com/TO2tulA.jpg">
+	<img src ="https://imgur.com/TO2tulA.jpg">
 
 - Tuy nhiên khi truy cập web lại ra kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
 
-		<img src ="https://imgur.com/Gm0ZqDO.jpg">
+	<img src ="https://imgur.com/Gm0ZqDO.jpg">
 
 ## OK!!! Khó quá bỏ qua :)
 
