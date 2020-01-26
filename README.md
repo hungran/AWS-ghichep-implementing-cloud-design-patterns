@@ -29,7 +29,7 @@ vmhung290791@gmail.com
 		- 2. Install vagrant-aws
 			`vagrant plugin install vagrant-aws`
 	- Reason: fog-ovirt is one of the dependencies and since version 1.0.2 it depends on ovirt-engine-sdk which is giving trouble
-# Đồng bộ thư mục giữa máy host và EC2 bằng rsync
+## Đồng bộ thư mục giữa máy host và EC2 bằng rsync
 ---
 - Cài thư viện Cygwin64 từ [link](https://cygwin.com/install.html) và làm theo hướng dẫn sau [link](https://site.elastichosts.com/blog/installing-cygwin-on-windows-for-linux-tools/) **Lưu ý: chọn các library rsync theo hướng dẫn**
 
@@ -55,7 +55,7 @@ vmhung290791@gmail.com
 			config.vm.box = "dummy"
 			config.vm.provider :aws do |aws, override|
 		# 	Using rsync by cygwin64 instead SMB share
-			config.vm.synced_folder ".", "/vagrant", disabled: true
+			config.vm.allowed_synced_folder_types = [:rsync]	
 			aws.access_key_id = File.read("access_key.txt")
 			aws.secret_access_key = File.read("secret_access_key.txt")
 		#	aws.session_token = "SESSION TOKEN"
