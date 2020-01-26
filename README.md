@@ -37,6 +37,7 @@ vmhung290791@gmail.com
 		3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
 		4. `vagrant destroy` terminate machine\instance\vm
 		5. `vagrant halt --force` shutdown machine\instance\vm
+		6. `vagrant reload --provision` khởi động lại machine\instance\vm từ `vagrantfile` đã dược thay đổi
 ### Snapshoot patterns
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
@@ -45,6 +46,8 @@ vmhung290791@gmail.com
 			Vagrant.configure("2") do |config|
 			config.vm.box = "dummy"
 			config.vm.provider :aws do |aws, override|
+		# 	Disable SMB share / reason: network.config is not support between Vagrant & AWS
+			config.vm.synced_folder ".", "/vagrant", disabled: true
 			aws.access_key_id = File.read("access_key.txt")
 			aws.secret_access_key = File.read("secret_access_key.txt")
 		#	aws.session_token = "SESSION TOKEN"
