@@ -13,7 +13,7 @@ vmhung290791@gmail.com
 
 	- Tài khoản AWS (khuyên dùng tài khoản free)
 	- Ubuntu 16.04 LTS freetier, t2.micro
-	- **Nhớ tắt hoặc xóa các resource sau khi lab để tránh mất chi phí**
+## Lưu ý: Nhớ tắt hoặc xóa các resource sau khi lab để tránh mất chi phí
 
 ### Giới thiệu về Vagrant
 - Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên Ubuntu, macOS và Windows
