@@ -50,8 +50,7 @@ sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instan
 sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type) " >> hung.txt
 sudo cat hung.txt > /var/www/html/index.html
 	`
-- CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances`
-	Kết quả như hình
-	<img src ="https://imgur.com/TO2tulA.jpg">
+- CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả như hình
+		<img src ="https://imgur.com/TO2tulA.jpg">
 - Tuy nhiên khi mở trên trình duyệt web lại ra kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
-	<img src ="https://imgur.com/Gm0ZqDO.jpg">
+		<img src ="https://imgur.com/Gm0ZqDO.jpg">
