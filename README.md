@@ -31,10 +31,10 @@ vmhung290791@gmail.com
 	- Reason: fog-ovirt is one of the dependencies and since version 1.0.2 it depends on ovirt-engine-sdk which is giving trouble
 # Đồng bộ thư mục giữa máy host và EC2 bằng rsync
 ---
-- Cài thư viện Cygwin64 từ [link](https://cygwin.com/install.html) và làm theo hướng dẫn sau [link](https://site.elastichosts.com/blog/installing-cygwin-on-windows-for-linux-tools/) ** Lưu ý: chọn các library rsync theo hướng dẫn **
+- Cài thư viện Cygwin64 từ [link](https://cygwin.com/install.html) và làm theo hướng dẫn sau [link](https://site.elastichosts.com/blog/installing-cygwin-on-windows-for-linux-tools/) **Lưu ý: chọn các library rsync theo hướng dẫn**
 
 
-- Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile)s sample ở đây :)
+- Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile) sample ở đây :)
 
 	- Một số lệnh cơ bản của vagrant:
 		1. `vagrant up --provider=aws` chạy vagrant với aws từ `vagrantfile`
@@ -54,9 +54,8 @@ vmhung290791@gmail.com
 			Vagrant.configure("2") do |config|
 			config.vm.box = "dummy"
 			config.vm.provider :aws do |aws, override|
-		# 	Disable SMB share / reason: network.config is not support between Vagrant & AWS
+		# 	Using rsync by cygwin64 instead SMB share
 			config.vm.synced_folder ".", "/vagrant", disabled: true
-			
 			aws.access_key_id = File.read("access_key.txt")
 			aws.secret_access_key = File.read("secret_access_key.txt")
 		#	aws.session_token = "SESSION TOKEN"
@@ -102,8 +101,6 @@ vmhung290791@gmail.com
 - Kết quả:
 
 <img src ="https://imgur.com/Gm0ZqDO.jpg">
-
-## OK!!! Khó quá bỏ qua :)
 
 - Tạo snapshoot `ebs` running instance
 	- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
