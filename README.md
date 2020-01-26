@@ -89,7 +89,7 @@ vmhung290791@gmail.com
 		
 	<img src ="https://imgur.com/TO2tulA.jpg">
 
-- Tuy nhiên khi truy cập web lại ra kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
+- Tuy nhiên khi truy cập web lại ra kết quả **index.html** in kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
 
 	<img src ="https://imgur.com/Gm0ZqDO.jpg">
 
