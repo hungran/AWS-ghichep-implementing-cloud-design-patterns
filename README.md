@@ -39,8 +39,8 @@ vmhung290791@gmail.com
 	- 3. Tại giao diện Volumes section, chuột phải chọn Volume cần snapshoot chọn **Create Snapshot**
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng vagrantfile & bootstrap có nội dung như dưới:
 
-	`	#! /bin/bash
-		sudo apt-get upgrade
+	` #! /bin/bash `
+		sudo apt-get upgrade 
 		sudo apt-get update -y
 		sudo apt install awscli -y
 		sudo apt-get install apache2 -y
@@ -48,8 +48,7 @@ vmhung290791@gmail.com
 		sudo echo "public ip is $(curl http://169.254.169.254/latest/meta-data/public-ipv4), " >> hung.txt
 		sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instance-id)," >> hung.txt
 		sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type) " >> hung.txt
-		sudo cat hung.txt > /var/www/html/index.html
-	`
+		sudo cat hung.txt > /var/www/html/index.html`
 
 - CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả như hình
 		<img src ="https://imgur.com/TO2tulA.jpg">
