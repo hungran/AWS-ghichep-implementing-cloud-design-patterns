@@ -103,15 +103,15 @@ vmhung290791@gmail.com
 	
 	- 3. Tại giao diện Volumes section, chuột phải chọn Volume cần snapshoot chọn **Create Snapshot**
 		
-		<img src ="https://imgur.com/iLGIEo3.jpg">
+	<img src ="https://imgur.com/iLGIEo3.jpg">
 	
 	- 4. Giao diện **Create Snapshot** popup ra, ta điền các tham số như hình:	
 		
-		<img src ="https://imgur.com/M2yB2C4.jpg">
+	<img src ="https://imgur.com/M2yB2C4.jpg">
 	
 	- 5. Kết quả:
 	
-		<img src ="https://imgur.com/HJ6cCnW.jpg">
+	<img src ="https://imgur.com/HJ6cCnW.jpg">
 		
 ### NEW!!! Nâng cao Dùng snapshot lifecycle tự động tạo và xóa snapshoot
 Miệt mài commit miệt mài push --> vận may đến?
