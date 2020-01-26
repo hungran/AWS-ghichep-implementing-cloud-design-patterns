@@ -39,18 +39,17 @@ vmhung290791@gmail.com
 		5. `vagrant halt --force` shutdown machine\instance\vm
 ### Snapshoot patterns
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
-	
-	- Vagrant File:
-		---
-		Vagrant.configure("2") do |config|
-			config.vm.box = "dummy"
-			config.vm.provider :aws do |aws, override|
+		
+		Vagrantfile:
+				Vagrant.configure("2") do |config|
+		  config.vm.box = "dummy"
+		  config.vm.provider :aws do |aws, override|
 			aws.access_key_id = File.read("access_key.txt")
 			aws.secret_access_key = File.read("secret_access_key.txt")
-			#aws.session_token = "SESSION TOKEN"
-			#aws.keypair_name = "KEYPAIR NAME"
+		#   aws.session_token = "SESSION TOKEN"
+		#   aws.keypair_name = "KEYPAIR NAME"
 			aws.region = "ap-southeast-1"
-			#ubuntu 16.04 LTS
+		#	ubuntu 16.04 LTS
 			aws.ami = "ami-0ee0b284267ea6cde"
 			aws.instance_type = "t2.micro"
 			aws.availability_zone = "ap-southeast-1b"
@@ -60,18 +59,16 @@ vmhung290791@gmail.com
 			aws.security_groups = "sg-04625159d166466da"
 			aws.tags = {
 				'Name' => 'Hung_Test_Vagrantfile_Bootstrap_02'
-						}
+			}
 			aws.keypair_name = "hung20190616"
 			aws.user_data = File.read("bootstrap.txt")
 			override.ssh.username = "ubuntu"
-			override.ssh.private_key_path = "C:/HashiCorp/hung20190616.pem"	
-			end
+			override.ssh.private_key_path = "C:/HashiCorp/hung20190616.pem"
+			
+		  end
 		end
-
-
-	- Bootstrap
-		---
-	
+		
+		
 		Bootstrap: 
 		---
 		
