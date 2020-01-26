@@ -36,7 +36,7 @@ vmhung290791@gmail.com
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng vagrantfile & bootstrap có nội dung như dưới:
 
 	` 
-		|															---												|
+		|															---			| --- |
 		| #! /bin/bash 																								|
 		| sudo apt-get upgrade 																						|
 		| sudo apt-get update -y 																					|
