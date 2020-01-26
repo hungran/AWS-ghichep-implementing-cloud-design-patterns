@@ -33,7 +33,7 @@ vmhung290791@gmail.com
 		3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
 		4. `vagrant destroy` terminate vm
 ### Snapshoot patterns
-- Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng vagrantfile & bootstrap có nội dung như dưới:
+- Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 
  
 		Bootstrap: 
