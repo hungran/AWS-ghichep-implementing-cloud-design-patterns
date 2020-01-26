@@ -4,6 +4,7 @@ sudo apt-get update -y
 sudo apt install awscli -y
 sudo apt-get install apache2 -y
 sudo service apache2 start
-sudo curl http://169.254.169.254/latest/meta-data/public-ipv4 -o hung.txt
+sudo echo "public ip is $(curl http://169.254.169.254/latest/meta-data/public-ipv4), " >> hung.txt
+sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instance-id)," >> hung.txt
+sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type) " >> hung.txt
 sudo cat hung.txt > /var/www/html/index.html
-<img src="img_girl.jpg" alt="Girl in a jacket">
