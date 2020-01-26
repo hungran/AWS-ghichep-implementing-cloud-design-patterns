@@ -54,7 +54,7 @@ vmhung290791@gmail.com
 		sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type)." >> hung.txt
 		sudo cat hung.txt > /var/www/html/index.html
 		
-
+- Ý nghĩa: Cài đặt và chạy web apache2, **lấy metadata** của instance đẩy vào file "index.html" **Code ngáo đá, mong người đọc thông cãm :)**
 
 - CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả public-ipv4 là **18.140.60.200** như hình
 		<img src ="https://imgur.com/TO2tulA.jpg">
