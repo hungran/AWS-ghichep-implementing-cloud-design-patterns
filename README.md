@@ -38,7 +38,8 @@ vmhung290791@gmail.com
 	- 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
 	- 3. Tại giao diện Volumes section, chuột phải chọn Volume cần snapshoot chọn **Create Snapshot**
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng vagrantfile & bootstrap có nội dung như dưới:
-`		#! /bin/bash
+
+	`	#! /bin/bash
 		sudo apt-get upgrade
 		sudo apt-get update -y
 		sudo apt install awscli -y
@@ -48,7 +49,8 @@ vmhung290791@gmail.com
 		sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instance-id)," >> hung.txt
 		sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type) " >> hung.txt
 		sudo cat hung.txt > /var/www/html/index.html
-`
+	`
+
 - CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả như hình
 		<img src ="https://imgur.com/TO2tulA.jpg">
 - Tuy nhiên khi mở trên trình duyệt web lại ra kết quả public-ipv4 khác @@ --> Cần lắm 1 lời giải thích ở đây!!!
