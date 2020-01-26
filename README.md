@@ -38,6 +38,7 @@ vmhung290791@gmail.com
 		4. `vagrant destroy` terminate machine\instance\vm
 		5. `vagrant halt --force` shutdown machine\instance\vm
 		6. `vagrant reload --provision` khởi động lại machine\instance\vm từ `vagrantfile` đã dược thay đổi
+		7. `vagrant ssh` ssh trực tiếp vào machine\instance\vm vừa khởi chạy
 ### Snapshoot patterns
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
@@ -66,7 +67,9 @@ vmhung290791@gmail.com
 			}
 			aws.keypair_name = "hung20190616"
 			aws.user_data = File.read("bootstrap.txt")
+		#	Câu lệnh mặc định sử dụng user name
 			override.ssh.username = "ubuntu"
+		#	Câu lệnh mặc định sử dụng keypem dùng để ssh đến instance	
 			override.ssh.private_key_path = "C:/HashiCorp/hung20190616.pem"
 			
 		  end
