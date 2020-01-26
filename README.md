@@ -59,7 +59,7 @@ vmhung290791@gmail.com
 
 ## OK!!! Khó quá bỏ qua :)
 
-- Tạo snapshoot `ebs` đẩy vào s3 từ running instance
+- Tạo snapshoot `ebs` running instance
 	- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
 	- 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **Description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
 	
@@ -75,7 +75,7 @@ vmhung290791@gmail.com
 	
 	- 5. Kết quả:
 	
-		<img src ="https://imgur.com/undefined.jpg">
+		<img src ="https://imgur.com/HJ6cCnW.jpg">
 		
 ### NEW!!! Dùng snapshot lifecycle tự động tạo và xóa snapshoot
 		
