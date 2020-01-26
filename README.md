@@ -29,8 +29,13 @@ vmhung290791@gmail.com
 		- 2. Install vagrant-aws
 			`vagrant plugin install vagrant-aws`
 	- Reason: fog-ovirt is one of the dependencies and since version 1.0.2 it depends on ovirt-engine-sdk which is giving trouble
+# Đồng bộ thư mục giữa máy host và EC2 bằng rsync
+---
+- Cài thư viện Cygwin64 từ [link](https://cygwin.com/install.html) và làm theo hướng dẫn sau [link](https://site.elastichosts.com/blog/installing-cygwin-on-windows-for-linux-tools/) ** Lưu ý: chọn các library rsync theo hướng dẫn **
+
 
 - Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile)s sample ở đây :)
+
 	- Một số lệnh cơ bản của vagrant:
 		1. `vagrant up --provider=aws` chạy vagrant với aws từ `vagrantfile`
 		2. `vagrant reload --provision` khởi động lại machine\instance\vm
@@ -39,8 +44,10 @@ vmhung290791@gmail.com
 		5. `vagrant halt --force` shutdown machine\instance\vm
 		6. `vagrant reload --provision` khởi động lại machine\instance\vm từ `vagrantfile` đã dược thay đổi
 		7. `vagrant ssh` ssh trực tiếp vào machine\instance\vm vừa khởi chạy
+		8. `vagrant rsync` đồng bộ lại thư mục giữa host và machine\instance\vm đang chạy
+
 ### Snapshoot patterns
-- Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
+- Tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
 		Vagrantfile:
 		---
@@ -49,6 +56,7 @@ vmhung290791@gmail.com
 			config.vm.provider :aws do |aws, override|
 		# 	Disable SMB share / reason: network.config is not support between Vagrant & AWS
 			config.vm.synced_folder ".", "/vagrant", disabled: true
+			
 			aws.access_key_id = File.read("access_key.txt")
 			aws.secret_access_key = File.read("secret_access_key.txt")
 		#	aws.session_token = "SESSION TOKEN"
