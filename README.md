@@ -18,13 +18,13 @@ vmhung290791@gmail.com
 - Bài viết & hướng dẫn cài đặt trên Windows (tiếng Việt) [Vagrant-viblo.asia](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
 - Hướng dẫn cài đặt plug in aws cho vagrant [Link chính thức](https://github.com/mitchellh/vagrant-aws)
 - *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit*
- `The "libxml2" package isn't available #539`
+	`The "libxml2" package isn't available #539`
 	- Hướng dẫn:
 		- 1. Install fog-ovirt 1.0.1
 			`vagrant plugin install --plugin-version 1.0.1 fog-ovirt`
 		- 2. Install vagrant-aws
 			`vagrant plugin install vagrant-aws`
-	- Reason: fog-ovirt is one of the dependencies and since version 1.0.2 it depends on ovirt-engine-sdk which is giving trouble'
+	- Reason: fog-ovirt is one of the dependencies and since version 1.0.2 it depends on ovirt-engine-sdk which is giving trouble
 
 - Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile)s sample ở đây :)
 	- Một số lệnh cơ bản của vagrant:
@@ -33,5 +33,9 @@ vmhung290791@gmail.com
 		3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
 		4. `vagrant destroy` terminate vm
 ### Snapshoot patterns
-
+- Tạo snapshoot `ebs` đẩy vào s3 từ running instance
+	- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
+	- 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
+	- 3. Tại giao diện Volumes section, chuột phải chọn Volumes cần snapshoot chọn **Create Snapshot**
+	
 	
