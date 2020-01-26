@@ -42,7 +42,8 @@ vmhung290791@gmail.com
 	
 	- Vagrant File:
 		---
-`
+
+
 		Vagrant.configure("2") do |config|
 			config.vm.box = "dummy"
 			config.vm.provider :aws do |aws, override|
@@ -68,10 +69,10 @@ vmhung290791@gmail.com
 			override.ssh.private_key_path = "C:/HashiCorp/hung20190616.pem"	
 			end
 		end
-`
 
-		Bootstrap: 
-		---
+
+	- Bootstrap
+		---  
 		
 		#! /bin/bash
 		sudo apt-get upgrade
