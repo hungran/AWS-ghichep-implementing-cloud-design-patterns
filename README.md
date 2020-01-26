@@ -13,7 +13,8 @@ vmhung290791@gmail.com
 
 ### Giới thiệu về Vagrant
 - Là công cụ xây dựng, quản lý máy ảo, có thể chạy trên ubuntu, macOS và Windows
-- Máy ảo có thể chạy trên các môi trường từ onpremis ví dụ như `Vmware`, `HyperV(?)`, hoặc cloud `AWS` ...
+- Ngôn ngữ được sử dụng là `ruby`
+- Máy ảo có thể chạy trên các môi trường từ on-prem ví dụ như `Vmware`, `HyperV(?)`, hoặc cloud `AWS` ...
 - Bài viết & hướng dẫn cài đặt trên Windows (tiếng Việt) [Vagrant-viblo.asia](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
 - Hướng dẫn cài đặt plug in aws cho vagrant [Link chính thức](https://github.com/mitchellh/vagrant-aws)
 - *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit*
