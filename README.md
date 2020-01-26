@@ -124,6 +124,7 @@ vmhung290791@gmail.com
 	
 - 5. Kết quả:
 	
-<img src ="https://imgur.com/HJ6cCnW.jpg">	
+<img src ="https://imgur.com/HJ6cCnW.jpg">
+
 ### NEW!!! Nâng cao Dùng snapshot lifecycle tự động tạo và xóa snapshoot
 Miệt mài commit miệt mài push --> vận may đến?
