@@ -83,7 +83,7 @@ vmhung290791@gmail.com
 		sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type)." >> hung.txt
 		sudo cat hung.txt > /var/www/html/index.html
 		
-- Ý nghĩa: Cài đặt ec2 từ `AMI ubuntu 16.04 LTS` và chạy web `apache2`, **lấy [metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)** của instance đẩy vào file "index.html" **Script ngáo đá, mong người đọc thông cãm :)**
+- Ý nghĩa: Cài đặt ec2 từ `AMI ubuntu 16.04 LTS` và chạy web `apache2`, **lấy [metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)** của instance đẩy vào file **"index.html"** **Script ngáo đá, mong người đọc thông cãm :)**
 
 - CMD kiểm tra instances bằng aws cli bằng lệnh `aws ec2 describe-instances` được kết quả public-ipv4 là **18.140.60.200** như hình
 		
