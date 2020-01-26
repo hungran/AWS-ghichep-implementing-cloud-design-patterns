@@ -41,9 +41,10 @@ vmhung290791@gmail.com
 - Trong quá trình tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
 		Vagrantfile:
-				Vagrant.configure("2") do |config|
-		  config.vm.box = "dummy"
-		  config.vm.provider :aws do |aws, override|
+		---
+			Vagrant.configure("2") do |config|
+			config.vm.box = "dummy"
+			config.vm.provider :aws do |aws, override|
 			aws.access_key_id = File.read("access_key.txt")
 			aws.secret_access_key = File.read("secret_access_key.txt")
 		#   aws.session_token = "SESSION TOKEN"
@@ -67,7 +68,6 @@ vmhung290791@gmail.com
 			
 		  end
 		end
-		
 		
 		Bootstrap: 
 		---
