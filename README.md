@@ -36,7 +36,7 @@ vmhung290791@gmail.com
 
 - Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile) sample ở đây :)
 
-	- Một số lệnh cơ bản của vagrant:
+- Một số lệnh cơ bản của vagrant:
 		1. `vagrant up --provider=aws` chạy vagrant với aws từ `vagrantfile`
 		2. `vagrant reload --provision` khởi động lại machine\instance\vm
 		3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
@@ -45,7 +45,7 @@ vmhung290791@gmail.com
 		6. `vagrant reload --provision` khởi động lại machine\instance\vm từ `vagrantfile` đã dược thay đổi
 		7. `vagrant ssh` ssh trực tiếp vào machine\instance\vm vừa khởi chạy
 		8. `vagrant rsync` đồng bộ lại thư mục giữa host và machine\instance\vm đang chạy
-
+	
 - Tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
 		Vagrantfile:
