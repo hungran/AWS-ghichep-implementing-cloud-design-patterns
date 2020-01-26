@@ -46,7 +46,6 @@ vmhung290791@gmail.com
 		7. `vagrant ssh` ssh trực tiếp vào machine\instance\vm vừa khởi chạy
 		8. `vagrant rsync` đồng bộ lại thư mục giữa host và machine\instance\vm đang chạy
 
-### Snapshoot patterns
 - Tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
 		Vagrantfile:
@@ -102,7 +101,15 @@ vmhung290791@gmail.com
 
 <img src ="https://imgur.com/Gm0ZqDO.jpg">
 
-- Tạo snapshoot `ebs` running instance
+- Kiểm tra sync giữa host & instance bằng cách ssh vào instance qua lệnh `vagrant ssh`
+
+- Kết quả:
+
+<img src =" ">
+
+## Snapshoot patterns
+### Tạo snapshoot `ebs` running instance
+
 	- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
 	- 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **Description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
 	
