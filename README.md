@@ -37,6 +37,7 @@ vmhung290791@gmail.com
 - Tham khảo [Vagrantfile](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns/blob/master/Vagrantfile) sample ở đây :)
 
 - Một số lệnh cơ bản của vagrant:
+		
 		1. `vagrant up --provider=aws` chạy vagrant với aws từ `vagrantfile`
 		2. `vagrant reload --provision` khởi động lại machine\instance\vm
 		3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
