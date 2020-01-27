@@ -2,13 +2,14 @@ Vũ Mạnh Hùng
 vmhung290791@gmail.com
 - [Nguồn](https://www.amazon.com/Implementing-Cloud-Design-Patterns-AWS-ebook/dp/B00WX3W43I)
 
-- Đang update phần **snapshot Patterns**
+- Đang update phần **Stamp pattern**
 
 # GHI CHÉP QUÁ TRÌNH ĐỌC VÀ THỰC HÀNH CUỐN Implement_Cloud_Design_Patterns
 ## MỤC LỤC
 - [Giới thiệu về Vagrant](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-vagrant) / Công cụ được nhắc đến trong cuốn
-- [snapshot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshot-patterns) / Thực hành tạo snapshot / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshot
-
+- [snapshot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshot-patterns) / Thực hành tạo snapshot:
+	- [Appendix_NEW](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#appendix_new-n%C3%A2ng-cao-d%C3%B9ng-snapshot-lifecycle-t%E1%BB%B1-%C4%91%E1%BB%99ng-t%E1%BA%A1o-v%C3%A0-x%C3%B3a-snapshot) / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshot
+- [Stamp pattern]() / Updating / Sử dụng `vagrant` để khởi chạy ec2 phục vụ lab / tạo AMI từ ec2 này
 *Môi trường yêu cầu*:
 
 	- Tài khoản AWS (khuyên dùng tài khoản free)
