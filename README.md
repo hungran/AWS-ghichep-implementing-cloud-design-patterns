@@ -131,26 +131,27 @@ vmhung290791@gmail.com
 - 2. Vào giao diện GUI console -> tìm đến EC2 -> tìm đến tab **lifecycle policy manager** -> **Create Snapshot Lifecycle Policy** ta điền tham số như hình
 
 <img src ="https://imgur.com/62c4ksN.jpg">
-	- Lưu ý: Target chọn đến tag như tag `Name` value `Hung_Test_Vagrantfile_Bootstrap_02` như `vagrantfile` ta định nghĩa
-	- Đánh tags cho chính policy này:
+
+- Lưu ý: Target chọn đến tag như tag `Name` value `Hung_Test_Vagrantfile_Bootstrap_02` như `vagrantfile` ta định nghĩa
+- Đánh tags cho chính policy này:
 		
 		Key: Name
 		Value: snapshot_policy
 	
-	- Đặt lịch -> Tên lịch
-	- Run policy every *Amazon chỉ cho các lựa chọn chạy 2, 3, 4, 6, 8, 12, 24 giờ.* Ở đây ta chọn 24 giờ
-	- Staring at hh:mm UTC
-	- **Retention** có 2 dạng **Count** & **Age** ở đây ta chọn **Count**
-	- Do chọn **Count** nên sẽ có lựa chọn Retain, ta để 7 
-	- Kết quả:
+- Đặt lịch -> Tên lịch
+- Run policy every *Amazon chỉ cho các lựa chọn chạy 2, 3, 4, 6, 8, 12, 24 giờ.* Ở đây ta chọn 24 giờ
+- Staring at hh:mm UTC
+- **Retention** có 2 dạng **Count** & **Age** ở đây ta chọn **Count**
+- Do chọn **Count** nên sẽ có lựa chọn Retain, ta để 7 
+- Kết quả:
 		
-		<img src ="https://imgur.com/wCdTGkO.jpg">
+	<img src ="https://imgur.com/wCdTGkO.jpg">
 	
-	- Có các lựa chọn **Cross region copy(optional)
-	- IAM Role mặc định Amazon sẽ đặt Default role cho Snapshot này, default role sẽ cho phép ec2 tạo, sửa, xóa, view, describe snapshot
-	- Có lựa chọn để **enable** hoặc **disable** policy này khi khởi tạo
+- Có các lựa chọn **Cross region copy(optional)
+- IAM Role mặc định Amazon sẽ đặt Default role cho Snapshot này, default role sẽ cho phép ec2 tạo, sửa, xóa, view, describe snapshot
+- Có lựa chọn để **enable** hoặc **disable** policy này khi khởi tạo
 		
-		<img src ="https://imgur.com/RrhXmyC.jpg">
+	<img src ="https://imgur.com/RrhXmyC.jpg">
 		
 - 3. Kết quả
 
