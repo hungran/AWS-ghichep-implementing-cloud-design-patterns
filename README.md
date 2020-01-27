@@ -10,7 +10,8 @@ vmhung290791@gmail.com
 - [snapshot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshot-patterns) / Thực hành tạo snapshot:
 	- [Appendix_NEW](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#appendix_new-n%C3%A2ng-cao-d%C3%B9ng-snapshot-lifecycle-t%E1%BB%B1-%C4%91%E1%BB%99ng-t%E1%BA%A1o-v%C3%A0-x%C3%B3a-snapshot) / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshot
 - [Stamp pattern]() / Updating / Sử dụng `vagrant` để khởi chạy ec2 phục vụ lab / tạo AMI từ ec2 này
-*Môi trường yêu cầu*:
+
+- *Môi trường yêu cầu*:
 
 	- Tài khoản AWS (khuyên dùng tài khoản free)
 	- Ubuntu 16.04 LTS freetier, t2.micro
