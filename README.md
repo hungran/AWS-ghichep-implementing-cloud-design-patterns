@@ -140,7 +140,7 @@ vmhung290791@gmail.com
 	
 - Đặt lịch -> Tên lịch
 - Run policy every *Amazon chỉ cho các lựa chọn chạy 2, 3, 4, 6, 8, 12, 24 giờ.* Ở đây ta chọn 24 giờ
-- Startinging at hh:mm UTC
+- Starting at hh:mm UTC
 - **Retention** có 2 dạng **Count** & **Age** ở đây ta chọn **Count**
 - Do chọn **Count** nên sẽ có lựa chọn **Retain**, ta để 7 
 - Kết quả:
