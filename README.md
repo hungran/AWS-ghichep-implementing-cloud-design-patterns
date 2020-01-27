@@ -126,12 +126,11 @@ vmhung290791@gmail.com
 	
 <img src ="https://imgur.com/HJ6cCnW.jpg">
 
-###Appendix_NEW!!! Nâng cao Dùng snapshot lifecycle tự động tạo và xóa snapshot
+### Appendix_NEW!!! Nâng cao Dùng snapshot lifecycle tự động tạo và xóa snapshot
 - 1. Khởi chạy ec2 instance từ `vagrantfile` bằng lệnh `vagrant up --provider=aws`
 - 2. Vào giao diện GUI console -> tìm đến EC2 -> tìm đến tab **lifecycle policy manager** -> **Create Snapshot Lifecycle Policy** ta điền tham số như hình
 
 <img src ="https://imgur.com/62c4ksN.jpg">
-	
 	- Lưu ý: Target chọn đến tag như tag `Name` value `Hung_Test_Vagrantfile_Bootstrap_02` như `vagrantfile` ta định nghĩa
 	- Đánh tags cho chính policy này:
 		
