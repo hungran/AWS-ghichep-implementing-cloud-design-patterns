@@ -147,7 +147,7 @@ vmhung290791@gmail.com
 		
 	<img src ="https://imgur.com/wCdTGkO.jpg">
 	
-- Có các lựa chọn **Cross region copy(optional)
+- Có các lựa chọn **Cross region copy(optional)**
 - IAM Role mặc định Amazon sẽ đặt Default role cho Snapshot này, default role sẽ cho phép ec2 tạo, sửa, xóa, view, describe snapshot
 - Có lựa chọn để **enable** hoặc **disable** policy này khi khởi tạo
 		
