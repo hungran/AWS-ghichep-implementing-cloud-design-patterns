@@ -2,12 +2,12 @@ Vũ Mạnh Hùng
 vmhung290791@gmail.com
 - [Nguồn](https://www.amazon.com/Implementing-Cloud-Design-Patterns-AWS-ebook/dp/B00WX3W43I)
 
-- Đang update phần **Snapshoot Patterns**
+- Đang update phần **snapshot Patterns**
 
 # GHI CHÉP QUÁ TRÌNH ĐỌC VÀ THỰC HÀNH CUỐN Implement_Cloud_Design_Patterns
 ## MỤC LỤC
 - [Giới thiệu về Vagrant](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-vagrant) / Công cụ được nhắc đến trong cuốn
-- [Snapshoot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshoot-patterns) / Thực hành tạo snapshoot / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshoot
+- [snapshot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshot-patterns) / Thực hành tạo snapshot / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshot
 
 *Môi trường yêu cầu*:
 
@@ -42,11 +42,11 @@ vmhung290791@gmail.com
 	3. `aws.user_data` dùng để định nghĩa bootstrap thay vì dùng [provision](https://www.vagrantup.com/intro/getting-started/provisioning.html)
 	4. `vagrant destroy` terminate machine\instance\vm
 	5. `vagrant halt --force` shutdown machine\instance\vm
-	6. `vagrant reload --provision` khởi động lại machine\instance\vm từ `vagrantfile` đã dược thay đổi
+	6. `vagrant reload --provision` khởi động lại machine\instance\vm từ `vagrantfile` đã được thay đổi
 	7. `vagrant ssh` ssh trực tiếp vào machine\instance\vm vừa khởi chạy
 	8. `vagrant rsync` đồng bộ lại thư mục giữa host và machine\instance\vm đang chạy
 	
-- Tạo EC2 cho lab Snapshoot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
+- Tạo EC2 cho lab snapshot patterns bằng `vagrantfile` & `bootstrap` có nội dung như dưới:
 		
 		Vagrantfile:
 		---
@@ -107,14 +107,14 @@ vmhung290791@gmail.com
 
 <img src =" ">
 
-## Snapshoot patterns
-### Tạo snapshoot `ebs` running instance
+## snapshot patterns
+### Tạo snapshot `ebs` running instance
 - 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
 - 2. Vào giao diện GUI console -> tìm đến EC2 -> chọn instance đang chạy, tìm đến phần **Description** -> trỏ chuột và chọn đến link **volume-id** có dạng **vol-xxx**
 	
 <img src ="https://imgur.com/dPORWBp.jpg">
 	
-- 3. Tại giao diện Volumes section, chuột phải chọn Volume cần snapshoot chọn **Create Snapshot**
+- 3. Tại giao diện Volumes section, chuột phải chọn Volume cần snapshot chọn **Create Snapshot**
 		
 <img src ="https://imgur.com/iLGIEo3.jpg">
 	
@@ -126,5 +126,37 @@ vmhung290791@gmail.com
 	
 <img src ="https://imgur.com/HJ6cCnW.jpg">
 
-### NEW!!! Nâng cao Dùng snapshot lifecycle tự động tạo và xóa snapshoot
+###Appendix_NEW!!! Nâng cao Dùng snapshot lifecycle tự động tạo và xóa snapshot
+- 1. Khởi chạy ec2 instance từ `vagrantfile` bằng lệnh `vagrant up --provider=aws`
+- 2. Vào giao diện GUI console -> tìm đến EC2 -> tìm đến tab **lifecycle policy manager** -> **Create Snapshot Lifecycle Policy** ta điền tham số như hình
+
+<img src ="https://imgur.com/62c4ksN.jpg">
+	
+	- Lưu ý: Target chọn đến tag như tag `Name` value `Hung_Test_Vagrantfile_Bootstrap_02` như `vagrantfile` ta định nghĩa
+	- Đánh tags cho chính policy này:
+		
+		Key: Name
+		Value: snapshot_policy
+	
+	- Đặt lịch -> Tên lịch
+	- Run policy every *Amazon chỉ cho các lựa chọn chạy 2, 3, 4, 6, 8, 12, 24 giờ.* Ở đây ta chọn 24 giờ
+	- Staring at hh:mm UTC
+	- **Retention** có 2 dạng **Count** & **Age** ở đây ta chọn **Count**
+	- Do chọn **Count** nên sẽ có lựa chọn Retain, ta để 7 
+	- Kết quả:
+		
+		<img src ="https://imgur.com/wCdTGkO.jpg">
+	
+	- Có các lựa chọn **Cross region copy(optional)
+	- IAM Role mặc định Amazon sẽ đặt Default role cho Snapshot này, default role sẽ cho phép ec2 tạo, sửa, xóa, view, describe snapshot
+	- Có lựa chọn để **enable** hoặc **disable** policy này khi khởi tạo
+		
+		<img src ="https://imgur.com/RrhXmyC.jpg">
+		
+- 3. Kết quả
+
+<img src="https://imgur.com/qt7RXkb.jpg">
+
+<img src="https://imgur.com/l2vbbCS.jpg">
+		
 Miệt mài commit miệt mài push --> vận may đến?
