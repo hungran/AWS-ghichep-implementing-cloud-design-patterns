@@ -10,7 +10,7 @@ vmhung290791@gmail.com
 - [snapshot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshot-patterns) / Thực hành tạo snapshot:
 	- [Appendix_NEW](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#appendix_new-n%C3%A2ng-cao-d%C3%B9ng-snapshot-lifecycle-t%E1%BB%B1-%C4%91%E1%BB%99ng-t%E1%BA%A1o-v%C3%A0-x%C3%B3a-snapshot) / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshot
 - [Stamp pattern]() / Updating / Sử dụng `vagrant` để khởi chạy ec2 phục vụ lab / fix lỗi không `sudo` từ AMI Linux để rsycn thư mục (có thể bỏ qua nếu sử dụng AMI Ubuntu)/ tạo AMI từ ec2 này
-
+- [ScaleUp Patterns]() / ScaleUp bằng GUI
 
 *Môi trường yêu cầu*:
 
@@ -162,4 +162,18 @@ vmhung290791@gmail.com
 
 <img src="https://imgur.com/l2vbbCS.jpg">
 		
+## ScaleUp Patterns
+### Giới thiệu về auto scaling
+- Định nghĩa: [Link](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html)
+	
+	Là dịch vụ của Amazon, cho phép theo dõi mở rộng, thu hẹp tài nguyên trên AWS (EC2, DynamoDB,  Aurora Replica) dựa trên các kịch bản được định sẵn phối hợp cùng các dịch vụ Amazon ELB, CloudWatch.
+	Lưu ý: 
+	
+### Thực hành
+
+Thực hành scale up (từ t2.small -> t2.micro)
+
+- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
+- 2. 
+
 Miệt mài commit miệt mài push --> vận may đến?
