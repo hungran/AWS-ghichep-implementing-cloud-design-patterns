@@ -1,2 +1,5 @@
 # Vagrant
 .vagrant
+# key
+access_key.txt
+secret_access_key.txt
