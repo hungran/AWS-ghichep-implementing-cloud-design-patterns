@@ -9,7 +9,8 @@ vmhung290791@gmail.com
 - [Giới thiệu về Vagrant](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-vagrant) / Công cụ được nhắc đến trong cuốn
 - [snapshot patterns](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#snapshot-patterns) / Thực hành tạo snapshot:
 	- [Appendix_NEW](https://github.com/hungran/AWS-ghichep-implementing-cloud-design-patterns#appendix_new-n%C3%A2ng-cao-d%C3%B9ng-snapshot-lifecycle-t%E1%BB%B1-%C4%91%E1%BB%99ng-t%E1%BA%A1o-v%C3%A0-x%C3%B3a-snapshot) / Nâng cao bằng snapshot lifecycle để tự động hóa quy trình snapshot
-- [Stamp pattern]() / Updating / Sử dụng `vagrant` để khởi chạy ec2 phục vụ lab / tạo AMI từ ec2 này
+- [Stamp pattern]() / Updating / Sử dụng `vagrant` để khởi chạy ec2 phục vụ lab / fix lỗi không `sudo` từ AMI Linux để rsycn thư mục (có thể bỏ qua nếu sử dụng AMI Ubuntu)/ tạo AMI từ ec2 này
+
 
 *Môi trường yêu cầu*:
 
