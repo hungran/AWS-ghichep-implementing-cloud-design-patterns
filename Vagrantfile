@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
 #	Câu lệnh mặc định sử dụng user name
     override.ssh.username = "ubuntu"
 #	Câu lệnh mặc định sử dụng keypem dùng khi ssh vào instance 
-    override.ssh.private_key_path = "C:/HashiCorp/hung20190616.pem"
+    override.ssh.private_key_path = "hung20190616.pem"
 	config.ssh.username = 'ubuntu'
   end
 end

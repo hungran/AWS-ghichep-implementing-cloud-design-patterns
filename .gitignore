@@ -1,5 +1,8 @@
 # Vagrant
 .vagrant
+#rsync
+share
 # key
 access_key.txt
 secret_access_key.txt
+*.pem
