@@ -1,3 +1,16 @@
+# UPDATED: BUG with new Vagrant version 2.2.7 (release on Jan 27 2020)
+FIXED:
+
+- Vagrant 2.2.6 [LINK](https://releases.hashicorp.com/vagrant/2.2.6/)
+
+- Install plugin fog-ovirt 1.0.1:
+
+	vagrant plugin install --plugin-version 1.0.1 fog-ovirt
+
+- Install plugin vagrant-aws:
+
+	vagrant plugin install vagrant-aws
+	
 Vũ Mạnh Hùng
 vmhung290791@gmail.com
 - [Nguồn](https://www.amazon.com/Implementing-Cloud-Design-Patterns-AWS-ebook/dp/B00WX3W43I)
