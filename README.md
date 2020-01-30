@@ -16,6 +16,7 @@ vmhung290791@gmail.com
 
 	- Tài khoản AWS (khuyên dùng tài khoản free)
 	- Ubuntu 16.04 LTS freetier, t2.micro
+	- Vagrant 2.2.6 
 
 ## Lưu ý: Nhớ tắt hoặc xóa các resource sau khi lab để tránh mất chi phí
 
@@ -24,6 +25,7 @@ vmhung290791@gmail.com
 - Ngôn ngữ được sử dụng là `ruby`
 - Máy ảo có thể chạy trên các môi trường từ on-prem ví dụ như `Vmware`, `HyperV(?)`, hoặc cloud `AWS` ...
 - Bài viết & hướng dẫn cài đặt trên Windows (tiếng Việt) [Vagrant-viblo.asia](https://viblo.asia/p/tim-hieu-vagrant-phan-1-1l0rvmDQGyqA)
+- Link download phiên bản Vagrant 2.2.6 [Link](https://releases.hashicorp.com/vagrant/2.2.6/)
 - Hướng dẫn cài đặt plug in aws cho vagrant [Link chính thức](https://github.com/mitchellh/vagrant-aws)
 - *Lưu ý: dùng cách sau để fix bug khi chạy windows 10 pro 64bit*
 	`The "libxml2" package isn't available #539`
@@ -91,8 +93,8 @@ vmhung290791@gmail.com
 		#! /bin/bash
 		sudo apt-get upgrade
 		sudo apt-get update -y
-		sudo apt install awscli -y
-		sudo apt-get install apache2 -y
+		sudo apt-get install awscli -y
+		sudo apt-get install apache2 stress -y
 		sudo service apache2 start
 		sudo echo "public ip is $(curl http://169.254.169.254/latest/meta-data/public-ipv4), " >> hung.txt	
 		sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instance-id)," >> hung.txt
