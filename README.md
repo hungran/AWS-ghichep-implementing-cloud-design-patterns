@@ -5,11 +5,11 @@ FIXED:
 
 - Install plugin fog-ovirt 1.0.1:
 
-	vagrant plugin install --plugin-version 1.0.1 fog-ovirt
+	`vagrant plugin install --plugin-version 1.0.1 fog-ovirt`
 
 - Install plugin vagrant-aws:
 
-	vagrant plugin install vagrant-aws
+	`vagrant plugin install vagrant-aws`
 	
 Vũ Mạnh Hùng
 vmhung290791@gmail.com
