@@ -175,6 +175,3 @@ Thực hành scale up (từ t2.small -> t2.micro)
 
 - 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
 - 2. 
-
-Miệt mài commit miệt mài push --> vận may đến?
-- TEST
