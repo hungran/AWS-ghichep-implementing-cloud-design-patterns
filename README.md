@@ -177,3 +177,4 @@ Thực hành scale up (từ t2.small -> t2.micro)
 - 2. 
 
 Miệt mài commit miệt mài push --> vận may đến?
+- TEST
