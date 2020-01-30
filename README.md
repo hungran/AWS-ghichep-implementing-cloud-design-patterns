@@ -189,4 +189,4 @@ vmhung290791@gmail.com
 Thực hành scale up (từ t2.small -> t2.micro)
 
 - 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
-- 2. 
+- 2. Change instance type từ **t2.micro** sang **t2.small**. Mục đích để `scaleup` lên t2.micro khi kịch bản CPU vượt ngưỡng đặt sẵn.
