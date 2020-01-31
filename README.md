@@ -214,8 +214,8 @@ Thực hành scale out yêu cầu tăng số lượng instance khi CPU vượt q
 <img src="https://imgur.com/sd8PM3c.jpg">
 	
 
-- 3. Tạo AutoScaling Group tham số như dưới, **chú ý tích chọn Enable CloudWatch Detail Monitoring
-	- a. Activity / Gửi [notification]() qua email khi có sự kiện từ Autoscaling (sẽ bổ sung ở bài sau). Tại giao diện này cũng có thể theo dõi được sự kiện đã xảy ra 
+- 3. Tạo AutoScaling Group tham số như dưới, **chú ý tích chọn Enable CloudWatch Detail Monitoring**
+	- a. Activity / Gửi [notification]() qua text messae khi có sự kiện từ Autoscaling (sẽ bổ sung ở bài sau). Tại giao diện này cũng có thể theo dõi được sự kiện đã xảy ra 
 
 		<img src="https://imgur.com/gxDTR5L.jpg">
 	
@@ -241,7 +241,7 @@ Thực hành scale out yêu cầu tăng số lượng instance khi CPU vượt q
 
 - 6. Biểu đồ của `Cloudwatch` `EC2` và `AutoScale`
 
-	<img src="https://imgur.com/BBfModT.jpg">
+	<img src="https://imgur.com/BBfModT.jpggit c">
 	
 - 7. Lúc này 1 instance được khởi tạo thêm 
 
