@@ -235,6 +235,17 @@ Thực hành scale out yêu cầu tăng số lượng instance khi CPU vượt q
 	<img src="https://imgur.com/gTQYGHz.jpg">
 
 	<img src="https://imgur.com/WHm0Nyw.jpg">
-- 5. SSH vào instance và tăng CPU bằng app `stress`
+- 5. SSH vào instance và tăng CPU bằng lệnh `stress --cpu 6900 --timeout 240` --> `:( test mất 2 giờ để tìm đc con số chân lý :(`
+	Mục đích tăng CPU lên ngưỡng cao để `Cloudwatch` detect đc alarm.
+	<img src="https://imgur.com/oj1yY0C.jpg">
+
+- 6. Biểu đồ của `Cloudwatch` `EC2` và `AutoScale`
+
+	<img src="https://imgur.com/N0nXszE.jpg">
 	
-	<img src="https://imgur.com/tuYLFNO.jpg">
+- 7. Lúc này 1 instance được khởi tạo thêm 
+
+	<img src="https://imgur.com/QAs3PSI.jpg">
+	Kiểm tra ELB thì 2 instance đều đã được tự động thêm vào :)
+
+	<img src="https://imgur.com/KQKLxdE.jpg">
