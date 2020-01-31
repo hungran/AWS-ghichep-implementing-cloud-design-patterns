@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 	aws.region = "ap-southeast-1"
 	#ubuntu 16.04 LTS
     aws.ami = "ami-0ee0b284267ea6cde"
-	aws.instance_type = "t2.micro"
+	aws.instance_type = "t2.small"
 	aws.availability_zone = "ap-southeast-1b"
 	aws.subnet_id = "subnet-04fa887456cd2ab68"
 	aws.associate_public_ip = true

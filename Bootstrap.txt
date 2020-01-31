@@ -2,7 +2,8 @@
 sudo apt-get upgrade
 sudo apt-get update -y
 sudo apt-get install awscli -y
-sudo apt-get install apache2 strees -y
+sudo apt-get install apache2 -y
+sudo apt-get install stress -y
 sudo service apache2 start
 sudo echo "public ip is $(curl http://169.254.169.254/latest/meta-data/public-ipv4), " >> hung.txt
 sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instance-id)," >> hung.txt

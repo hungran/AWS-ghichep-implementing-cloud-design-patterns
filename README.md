@@ -186,9 +186,55 @@ vmhung290791@gmail.com
 	
 ### Thực hành
 
-Thực hành scale up (từ t2.small -> t2.micro)
+Thực hành scale out yêu cầu tăng số lượng instance khi CPU vượt quá 75%
 
-- 1. Khởi chạy ec2 instance từ vagrantfile bằng lệnh `vagrant up --provider=aws`
-- 2. Chuyển instance type từ **t2.micro** sang **t2.small**. Mục đích để `scaleup` lên t2.micro khi kịch bản CPU vượt ngưỡng đặt sẵn.
+- 1. Tạo ELB tham số như hình
 
-	<img src="">
+	<img src="https://imgur.com/au32Rjm.jpg">
+
+	<img src="https://imgur.com/Rfj1KIh.jpg">
+
+- 2. Tạo Lauch Configuration có `user data` được định nghĩa như sau:
+
+
+			#! /bin/bash
+			sudo apt-get upgrade
+			sudo apt-get update -y
+			sudo apt-get install awscli -y
+			sudo apt-get install apache2 -y
+			sudo apt-get install stress -y
+			sudo service apache2 start
+			sudo echo "public ip is $(curl http://169.254.169.254/latest/meta-data/public-ipv4), " >> hung.txt
+			sudo echo "instance id is $(curl  http://169.254.169.254/latest/meta-data/instance-id)," >> hung.txt
+			sudo echo "instance-type is $(curl  http://169.254.169.254/latest/meta-data/instance-type) " >> hung.txt
+			sudo cat hung.txt > /var/www/html/index.html
+	
+Ý nghĩa: Khi truy cập web thông qua ELB để kiểm tra ta đang truy cập vào instance nào, `stress` để test tăng CPU
+
+<img src="https://imgur.com/sd8PM3c.jpg">
+	
+
+- 3. Tạo AutoScaling Group tham số như dưới, **chú ý tích chọn Enable CloudWatch Detail Monitoring
+	- a. Activity / Gửi [notification]() qua email khi có sự kiện từ Autoscaling (sẽ bổ sung ở bài sau). Tại giao diện này cũng có thể theo dõi được sự kiện đã xảy ra 
+
+		<img src="https://imgur.com/gxDTR5L.jpg">
+	
+	- b. Tham số `Increase` và tham số `Decrease` *đặt tên hơi lẫn :)*
+
+		<img src="https://imgur.com/TrFp8Wl.jpg">
+
+		Chú ý tại giao diện này ta có thể đặt lịch cho việc autoscaling (ví dụ này không có nhé :) )
+
+		<img src="https://imgur.com/SZQuoD4.jpg">
+	
+	- c. Ngoài ra còn có giao diện `Instance Management` và `Monitoring` để quản lý và theo dõi Instance cũng như autoscaling event
+		<img src="https://imgur.com/cl9treu.jpg">
+
+- 4. Kiểm tra hoạt động của `ELB` tạo ở bước [1]() bằng cách truy cập browser đến DNS link của ELB or dùng lệnh như sau `curl --silent link`:
+ 	Kết quả với lệnh `curl` & web browser
+	<img src="https://imgur.com/gTQYGHz.jpg">
+
+	<img src="https://imgur.com/WHm0Nyw.jpg">
+- 5. SSH vào instance và tăng CPU bằng app `stress`
+	
+	<img src="https://imgur.com/tuYLFNO.jpg">
